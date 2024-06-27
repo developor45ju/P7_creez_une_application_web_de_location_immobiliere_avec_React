@@ -20,7 +20,7 @@ const nameSite = 'Kasa';
 
 const App = () => {
     return (
-        <HashRouter>
+        <HashRouter basename='/kasa-oc-p7'>
             <Header nav={navItems} logo={logoSite} />
             <Routes>
                 <Route path='/' element={<Home />} />
