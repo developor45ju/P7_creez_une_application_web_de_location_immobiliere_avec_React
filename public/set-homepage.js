@@ -1,4 +1,4 @@
-const packageJson = require('./package.json');
+const packageJson = require('../package.json');
 
 // Détecte l'environnement de déploiement
 const isGitHubPages = window.location.hostname.endsWith('.github.io');
