@@ -1,3 +1,5 @@
+const packageJson = require('./package.json');
+
 // Détecte l'environnement de déploiement
 const isGitHubPages = window.location.hostname.endsWith('.github.io');
 const isNetlify = window.location.hostname.endsWith('.netlify.app');
@@ -9,7 +11,7 @@ const homepages = {
 };
 
 // Obtient l'URL correcte en fonction de l'environnement
-const homepageUrl = isGitHubPages ? homepages.githubPages : (isNetlify ? homepages.netlify : null);
+const homepageUrl = isGitHubPages ? packageJson.homepages = homepages.githubPages : (isNetlify ? packageJson.homepages = homepages.netlify : null);
 
 // Redirige si nécessaire
 if (homepageUrl && window.location.pathname === '/') {
